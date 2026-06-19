@@ -1,0 +1,8 @@
+.git
+.venv
+__pycache__
+*.pyc
+models/*.tar.gz
+results
+.rasa
+.env

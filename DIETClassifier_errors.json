@@ -1,0 +1,638 @@
+[
+  {
+    "text": "I am going to Paris",
+    "entities": [
+      {
+        "start": 14,
+        "end": 19,
+        "value": "Paris",
+        "entity": "destination"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "flying from New York to Costa Rica",
+    "entities": [
+      {
+        "start": 12,
+        "end": 20,
+        "value": "New York",
+        "entity": "origin"
+      },
+      {
+        "start": 24,
+        "end": 34,
+        "value": "Costa Rica",
+        "entity": "destination"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I would like to go to Tokyo",
+    "entities": [
+      {
+        "start": 22,
+        "end": 27,
+        "value": "Tokyo",
+        "entity": "destination"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "start date 2026-11-01, end date 2026-11-06",
+    "entities": [
+      {
+        "start": 11,
+        "end": 21,
+        "value": "2026-11-01",
+        "entity": "start_date"
+      },
+      {
+        "start": 32,
+        "end": 42,
+        "value": "2026-11-06",
+        "entity": "end_date"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "end_date",
+        "start": 11,
+        "end": 21,
+        "confidence_entity": 0.5485324263572693,
+        "value": "2026-11-01",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "end_date",
+        "start": 32,
+        "end": 42,
+        "confidence_entity": 0.31415361166000366,
+        "value": "2026-11-06",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I go on 2026-09-18 and come back 2026-09-25",
+    "entities": [
+      {
+        "start": 8,
+        "end": 18,
+        "value": "2026-09-18",
+        "entity": "start_date"
+      },
+      {
+        "start": 33,
+        "end": 43,
+        "value": "2026-09-25",
+        "entity": "end_date"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "end_date",
+        "start": 8,
+        "end": 18,
+        "confidence_entity": 0.5484377145767212,
+        "value": "2026-09-18",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "start_date",
+        "start": 33,
+        "end": 43,
+        "confidence_entity": 0.4863891005516052,
+        "value": "2026-09-25",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "medium",
+    "entities": [
+      {
+        "start": 0,
+        "end": 6,
+        "value": "medium",
+        "entity": "sustainability_preference"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "choose medium sustainability",
+    "entities": [
+      {
+        "start": 7,
+        "end": 13,
+        "value": "medium",
+        "entity": "sustainability_preference"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "2026-07-10",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "start_date",
+        "start": 0,
+        "end": 10,
+        "confidence_entity": 0.37709689140319824,
+        "value": "2026-07-10",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "2026-07-17",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "start_date",
+        "start": 0,
+        "end": 10,
+        "confidence_entity": 0.46549689769744873,
+        "value": "2026-07-17",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "high",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "sustainability_preference",
+        "start": 0,
+        "end": 4,
+        "confidence_entity": 0.9741661548614502,
+        "value": "high",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "from London to Rome",
+    "entities": [
+      {
+        "start": 5,
+        "end": 11,
+        "value": "London",
+        "entity": "origin"
+      },
+      {
+        "start": 15,
+        "end": 19,
+        "value": "Rome",
+        "entity": "destination"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "destination",
+        "start": 5,
+        "end": 11,
+        "confidence_entity": 0.7171540260314941,
+        "value": "London",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "destination",
+        "start": 15,
+        "end": 19,
+        "confidence_entity": 0.33365029096603394,
+        "value": "Rome",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "destination: Edinburgh",
+    "entities": [
+      {
+        "start": 13,
+        "end": 22,
+        "value": "Edinburgh",
+        "entity": "destination"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "destination",
+        "start": 11,
+        "end": 12,
+        "confidence_entity": 0.1957956701517105,
+        "value": ":",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "destination",
+        "start": 13,
+        "end": 22,
+        "confidence_entity": 0.8855844140052795,
+        "value": "Edinburgh",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "from 2026-07-10 to 2026-07-17",
+    "entities": [
+      {
+        "start": 5,
+        "end": 15,
+        "value": "2026-07-10",
+        "entity": "start_date"
+      },
+      {
+        "start": 19,
+        "end": 29,
+        "value": "2026-07-17",
+        "entity": "end_date"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "start_date",
+        "start": 5,
+        "end": 15,
+        "confidence_entity": 0.3246763050556183,
+        "value": "2026-07-10",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "start_date",
+        "start": 19,
+        "end": 29,
+        "confidence_entity": 0.3162781298160553,
+        "value": "2026-07-17",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "return 2026-09-12",
+    "entities": [
+      {
+        "start": 7,
+        "end": 17,
+        "value": "2026-09-12",
+        "entity": "end_date"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "start_date",
+        "start": 7,
+        "end": 17,
+        "confidence_entity": 0.4312905967235565,
+        "value": "2026-09-12",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "my dates are 2026-12-20 to 2026-12-28",
+    "entities": [
+      {
+        "start": 13,
+        "end": 23,
+        "value": "2026-12-20",
+        "entity": "start_date"
+      },
+      {
+        "start": 27,
+        "end": 37,
+        "value": "2026-12-28",
+        "entity": "end_date"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "start_date",
+        "start": 13,
+        "end": 23,
+        "confidence_entity": 0.324997216463089,
+        "value": "2026-12-20",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "start_date",
+        "start": 27,
+        "end": 37,
+        "confidence_entity": 0.4723101556301117,
+        "value": "2026-12-28",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "travelling 2026-07-15 until 2026-07-22",
+    "entities": [
+      {
+        "start": 11,
+        "end": 21,
+        "value": "2026-07-15",
+        "entity": "start_date"
+      },
+      {
+        "start": 28,
+        "end": 38,
+        "value": "2026-07-22",
+        "entity": "end_date"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "start_date",
+        "start": 11,
+        "end": 19,
+        "confidence_entity": 0.3238309323787689,
+        "value": "2026-07-",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "start_date",
+        "start": 28,
+        "end": 38,
+        "confidence_entity": 0.3154571056365967,
+        "value": "2026-07-22",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "return on 2026-10-17",
+    "entities": [
+      {
+        "start": 10,
+        "end": 20,
+        "value": "2026-10-17",
+        "entity": "end_date"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "start_date",
+        "start": 10,
+        "end": 20,
+        "confidence_entity": 0.4846890866756439,
+        "value": "2026-10-17",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "sustainability should be high",
+    "entities": [
+      {
+        "start": 25,
+        "end": 29,
+        "value": "high",
+        "entity": "sustainability_preference"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "high priority for sustainability",
+    "entities": [
+      {
+        "start": 0,
+        "end": 4,
+        "value": "high",
+        "entity": "sustainability_preference"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "low sustainability is fine",
+    "entities": [
+      {
+        "start": 0,
+        "end": 3,
+        "value": "low",
+        "entity": "sustainability_preference"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "1200",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "budget",
+        "start": 0,
+        "end": 4,
+        "confidence_entity": 0.9960999488830566,
+        "value": "1200",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Amsterdam",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "destination",
+        "start": 0,
+        "end": 9,
+        "confidence_entity": 0.9539032578468323,
+        "value": "Amsterdam",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "my destination is Reykjavik",
+    "entities": [
+      {
+        "start": 18,
+        "end": 27,
+        "value": "Reykjavik",
+        "entity": "destination"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I leave on 2026-08-01 and return 2026-08-09",
+    "entities": [
+      {
+        "start": 11,
+        "end": 21,
+        "value": "2026-08-01",
+        "entity": "start_date"
+      },
+      {
+        "start": 33,
+        "end": 43,
+        "value": "2026-08-09",
+        "entity": "end_date"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "end_date",
+        "start": 11,
+        "end": 21,
+        "confidence_entity": 0.3796263635158539,
+        "value": "2026-08-01",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "end_date",
+        "start": 33,
+        "end": 43,
+        "confidence_entity": 0.37907636165618896,
+        "value": "2026-08-09",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "depart 2026-09-05",
+    "entities": [
+      {
+        "start": 7,
+        "end": 17,
+        "value": "2026-09-05",
+        "entity": "start_date"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "end_date",
+        "start": 7,
+        "end": 17,
+        "confidence_entity": 0.3879494369029999,
+        "value": "2026-09-05",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "between 2026-10-02 and 2026-10-11",
+    "entities": [
+      {
+        "start": 8,
+        "end": 18,
+        "value": "2026-10-02",
+        "entity": "start_date"
+      },
+      {
+        "start": 23,
+        "end": 33,
+        "value": "2026-10-11",
+        "entity": "end_date"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "end_date",
+        "start": 8,
+        "end": 18,
+        "confidence_entity": 0.25452977418899536,
+        "value": "2026-10-02",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "end_date",
+        "start": 23,
+        "end": 33,
+        "confidence_entity": 0.42654719948768616,
+        "value": "2026-10-11",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "outbound 2026-08-14 inbound 2026-08-21",
+    "entities": [
+      {
+        "start": 9,
+        "end": 19,
+        "value": "2026-08-14",
+        "entity": "start_date"
+      },
+      {
+        "start": 28,
+        "end": 38,
+        "value": "2026-08-21",
+        "entity": "end_date"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "end_date",
+        "start": 9,
+        "end": 19,
+        "confidence_entity": 0.3749990463256836,
+        "value": "2026-08-14",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "end_date",
+        "start": 28,
+        "end": 38,
+        "confidence_entity": 0.37591513991355896,
+        "value": "2026-08-21",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "depart on 2026-10-10",
+    "entities": [
+      {
+        "start": 10,
+        "end": 20,
+        "value": "2026-10-10",
+        "entity": "start_date"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "end_date",
+        "start": 10,
+        "end": 20,
+        "confidence_entity": 0.39228034019470215,
+        "value": "2026-10-10",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "low",
+    "entities": [
+      {
+        "start": 0,
+        "end": 3,
+        "value": "low",
+        "entity": "sustainability_preference"
+      }
+    ],
+    "predicted_entities": []
+  }
+]

@@ -1,0 +1,466 @@
+[
+  {
+    "text": "hey there",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "ask_culture",
+      "confidence": 0.8062084913253784
+    }
+  },
+  {
+    "text": "bye",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.5982128977775574
+    }
+  },
+  {
+    "text": "see you later",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "thanks",
+      "confidence": 0.2690277397632599
+    }
+  },
+  {
+    "text": "yes",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.30127495527267456
+    }
+  },
+  {
+    "text": "correct",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "ask_handover",
+      "confidence": 0.18981066346168518
+    }
+  },
+  {
+    "text": "no",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "inform_budget",
+      "confidence": 0.68839430809021
+    }
+  },
+  {
+    "text": "I want to travel responsibly",
+    "intent": "book_trip",
+    "intent_prediction": {
+      "name": "inform_destination",
+      "confidence": 0.6168062686920166
+    }
+  },
+  {
+    "text": "help me arrange a low impact city break",
+    "intent": "book_trip",
+    "intent_prediction": {
+      "name": "inform_sustainability",
+      "confidence": 0.26205766201019287
+    }
+  },
+  {
+    "text": "I want a trip that balances cost and emissions",
+    "intent": "book_trip",
+    "intent_prediction": {
+      "name": "inform_sustainability",
+      "confidence": 0.733128011226654
+    }
+  },
+  {
+    "text": "compare my options",
+    "intent": "ask_recommendation",
+    "intent_prediction": {
+      "name": "book_trip",
+      "confidence": 0.20096071064472198
+    }
+  },
+  {
+    "text": "what is the best low carbon plan?",
+    "intent": "ask_recommendation",
+    "intent_prediction": {
+      "name": "book_trip",
+      "confidence": 0.30893614888191223
+    }
+  },
+  {
+    "text": "what green transport can I use?",
+    "intent": "ask_transport",
+    "intent_prediction": {
+      "name": "ask_culture",
+      "confidence": 0.5605940222740173
+    }
+  },
+  {
+    "text": "should I go by train?",
+    "intent": "ask_transport",
+    "intent_prediction": {
+      "name": "ask_culture",
+      "confidence": 0.32927826046943665
+    }
+  },
+  {
+    "text": "recommend community tourism",
+    "intent": "ask_culture",
+    "intent_prediction": {
+      "name": "ask_recommendation",
+      "confidence": 0.8913182616233826
+    }
+  },
+  {
+    "text": "hand me over",
+    "intent": "ask_handover",
+    "intent_prediction": {
+      "name": "fallback",
+      "confidence": 0.15347203612327576
+    }
+  },
+  {
+    "text": "connect me to support",
+    "intent": "ask_handover",
+    "intent_prediction": {
+      "name": "inform_destination",
+      "confidence": 0.41295698285102844
+    }
+  },
+  {
+    "text": "I need a travel advisor",
+    "intent": "ask_handover",
+    "intent_prediction": {
+      "name": "book_trip",
+      "confidence": 0.9839135408401489
+    }
+  },
+  {
+    "text": "asdf qwer",
+    "intent": "fallback",
+    "intent_prediction": {
+      "name": "inform_destination",
+      "confidence": 0.9747321009635925
+    }
+  },
+  {
+    "text": "hello",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.5615659356117249
+    }
+  },
+  {
+    "text": "hi",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "inform_sustainability",
+      "confidence": 0.2459934800863266
+    }
+  },
+  {
+    "text": "that's all",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "thanks",
+      "confidence": 0.44022661447525024
+    }
+  },
+  {
+    "text": "end chat",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "book_trip",
+      "confidence": 0.2091272622346878
+    }
+  },
+  {
+    "text": "yep",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.4882079064846039
+    }
+  },
+  {
+    "text": "that is right",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "thanks",
+      "confidence": 0.19795015454292297
+    }
+  },
+  {
+    "text": "don't do that",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.5384867787361145
+    }
+  },
+  {
+    "text": "I need flights hotels and eco activities",
+    "intent": "book_trip",
+    "intent_prediction": {
+      "name": "ask_recommendation",
+      "confidence": 0.5501685738563538
+    }
+  },
+  {
+    "text": "take me to Lisbon",
+    "intent": "inform_destination",
+    "intent_prediction": {
+      "name": "ask_handover",
+      "confidence": 0.7556769251823425
+    }
+  },
+  {
+    "text": "I care most about lower emissions",
+    "intent": "inform_sustainability",
+    "intent_prediction": {
+      "name": "ask_recommendation",
+      "confidence": 0.3216802775859833
+    }
+  },
+  {
+    "text": "what are the emissions labels?",
+    "intent": "ask_carbon",
+    "intent_prediction": {
+      "name": "ask_recommendation",
+      "confidence": 0.7793933749198914
+    }
+  },
+  {
+    "text": "show the carbon comparison",
+    "intent": "ask_carbon",
+    "intent_prediction": {
+      "name": "ask_recommendation",
+      "confidence": 0.7060819864273071
+    }
+  },
+  {
+    "text": "local responsible activities",
+    "intent": "ask_culture",
+    "intent_prediction": {
+      "name": "inform_sustainability",
+      "confidence": 0.333635151386261
+    }
+  },
+  {
+    "text": "human help please",
+    "intent": "ask_handover",
+    "intent_prediction": {
+      "name": "thanks",
+      "confidence": 0.7128297686576843
+    }
+  },
+  {
+    "text": "escalate this",
+    "intent": "ask_handover",
+    "intent_prediction": {
+      "name": "ask_carbon",
+      "confidence": 0.4855099022388458
+    }
+  },
+  {
+    "text": "human handover",
+    "intent": "ask_handover",
+    "intent_prediction": {
+      "name": "thanks",
+      "confidence": 0.430768221616745
+    }
+  },
+  {
+    "text": "what is the stock price?",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "ask_recommendation",
+      "confidence": 0.7891287207603455
+    }
+  },
+  {
+    "text": "tell me a joke",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "book_trip",
+      "confidence": 0.2975690960884094
+    }
+  },
+  {
+    "text": "maybe the thing with stuff",
+    "intent": "fallback",
+    "intent_prediction": {
+      "name": "inform_sustainability",
+      "confidence": 0.2954544126987457
+    }
+  },
+  {
+    "text": "can you help me plan a trip?",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "book_trip",
+      "confidence": 0.7651398181915283
+    }
+  },
+  {
+    "text": "that helps",
+    "intent": "thanks",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.1978881061077118
+    }
+  },
+  {
+    "text": "please do",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.5385473966598511
+    }
+  },
+  {
+    "text": "nope",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.3715272843837738
+    }
+  },
+  {
+    "text": "cancel",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "inform_destination",
+      "confidence": 0.47778570652008057
+    }
+  },
+  {
+    "text": "I need a green travel itinerary",
+    "intent": "book_trip",
+    "intent_prediction": {
+      "name": "ask_handover",
+      "confidence": 0.5933918356895447
+    }
+  },
+  {
+    "text": "organise my vacation",
+    "intent": "book_trip",
+    "intent_prediction": {
+      "name": "ask_recommendation",
+      "confidence": 0.6566859483718872
+    }
+  },
+  {
+    "text": "my destination is Reykjavik",
+    "intent": "inform_destination",
+    "intent_prediction": {
+      "name": "ask_recommendation",
+      "confidence": 0.363110214471817
+    }
+  },
+  {
+    "text": "can you compare options for Stockholm",
+    "intent": "inform_destination",
+    "intent_prediction": {
+      "name": "ask_recommendation",
+      "confidence": 0.9434977173805237
+    }
+  },
+  {
+    "text": "I want Prague",
+    "intent": "inform_destination",
+    "intent_prediction": {
+      "name": "book_trip",
+      "confidence": 0.4800991415977478
+    }
+  },
+  {
+    "text": "cheaper is more important",
+    "intent": "inform_sustainability",
+    "intent_prediction": {
+      "name": "book_trip",
+      "confidence": 0.24108216166496277
+    }
+  },
+  {
+    "text": "I want the greenest practical option",
+    "intent": "inform_sustainability",
+    "intent_prediction": {
+      "name": "ask_recommendation",
+      "confidence": 0.7772112488746643
+    }
+  },
+  {
+    "text": "I prefer a balanced recommendation",
+    "intent": "inform_sustainability",
+    "intent_prediction": {
+      "name": "book_trip",
+      "confidence": 0.644107460975647
+    }
+  },
+  {
+    "text": "show me recommendations",
+    "intent": "ask_recommendation",
+    "intent_prediction": {
+      "name": "out_of_scope",
+      "confidence": 0.3900225758552551
+    }
+  },
+  {
+    "text": "find eco hotels",
+    "intent": "ask_recommendation",
+    "intent_prediction": {
+      "name": "book_trip",
+      "confidence": 0.34909284114837646
+    }
+  },
+  {
+    "text": "find low carbon transport",
+    "intent": "ask_transport",
+    "intent_prediction": {
+      "name": "inform_sustainability",
+      "confidence": 0.7299238443374634
+    }
+  },
+  {
+    "text": "is flying necessary?",
+    "intent": "ask_transport",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.25758230686187744
+    }
+  },
+  {
+    "text": "what can I do there?",
+    "intent": "ask_culture",
+    "intent_prediction": {
+      "name": "ask_transport",
+      "confidence": 0.2858928143978119
+    }
+  },
+  {
+    "text": "diagnose my illness",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "ask_handover",
+      "confidence": 0.2247644066810608
+    }
+  },
+  {
+    "text": "order pizza",
+    "intent": "out_of_scope",
+    "intent_prediction": {
+      "name": "ask_handover",
+      "confidence": 0.4090229272842407
+    }
+  },
+  {
+    "text": "blue train sandwich",
+    "intent": "fallback",
+    "intent_prediction": {
+      "name": "ask_transport",
+      "confidence": 0.5300687551498413
+    }
+  }
+]

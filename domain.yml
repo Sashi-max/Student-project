@@ -1,0 +1,423 @@
+# version: "3.1"
+
+# intents:
+#   - greet
+#   - goodbye
+#   - affirm
+#   - deny
+#   - book_trip
+#   - inform_destination
+#   - inform_budget
+#   - inform_dates
+#   - inform_sustainability
+#   - ask_recommendation
+#   - ask_carbon
+#   - ask_transport
+#   - ask_culture
+#   - ask_handover
+#   - thanks
+#   - out_of_scope
+#   - fallback
+
+# entities:
+#   - destination
+#   - origin
+#   - budget
+#   - start_date
+#   - end_date
+#   - sustainability_preference
+#   - transport_mode
+#   - people
+
+# slots:
+#   destination:
+#     type: text
+#     mappings:
+#       - type: from_entity
+#         entity: destination
+#       - type: from_text
+#         conditions:
+#           - active_loop: trip_planning_form
+#             requested_slot: destination
+#   origin:
+#     type: text
+#     initial_value: London
+#     mappings:
+#       - type: from_entity
+#         entity: origin
+#   budget:
+#     type: float
+#     min_value: 0.0
+#     max_value: 100000.0
+#     mappings:
+#       - type: from_entity
+#         entity: budget
+#       - type: from_text
+#         conditions:
+#           - active_loop: trip_planning_form
+#             requested_slot: budget
+#   start_date:
+#     type: text
+#     mappings:
+#       - type: from_entity
+#         entity: start_date
+#       - type: from_text
+#         conditions:
+#           - active_loop: trip_planning_form
+#             requested_slot: start_date
+#   end_date:
+#     type: text
+#     mappings:
+#       - type: from_entity
+#         entity: end_date
+#       - type: from_text
+#         conditions:
+#           - active_loop: trip_planning_form
+#             requested_slot: end_date
+#   sustainability_preference:
+#     type: categorical
+#     values:
+#       - low
+#       - medium
+#       - high
+#     mappings:
+#       - type: from_entity
+#         entity: sustainability_preference
+#       - type: from_text
+#         conditions:
+#           - active_loop: trip_planning_form
+#             requested_slot: sustainability_preference
+#   transport_mode:
+#     type: text
+#     mappings:
+#       - type: from_entity
+#         entity: transport_mode
+#   people:
+#     type: float
+#     initial_value: 1
+#     min_value: 1
+#     max_value: 20
+#     mappings:
+#       - type: from_entity
+#         entity: people
+#   carbon_results:
+#     type: any
+#     mappings:
+#       - type: custom
+#   travel_options:
+#     type: any
+#     mappings:
+#       - type: custom
+#   ranked_results:
+#     type: any
+#     mappings:
+#       - type: custom
+#   fallback_count:
+#     type: float
+#     initial_value: 0
+#     mappings:
+#       - type: custom
+#   conversation_summary:
+#     type: text
+#     mappings:
+#       - type: custom
+
+# forms:
+#   trip_planning_form:
+#     required_slots:
+#       - destination
+#       - start_date
+#       - end_date
+#       - budget
+#       - sustainability_preference
+
+# responses:
+#   utter_greet:
+#     - text: "Hello. I can help plan a lower-impact trip with transparent carbon and budget trade-offs."
+#       buttons:
+#         - title: "Plan a trip"
+#           payload: "/book_trip"
+#         - title: "Carbon estimate"
+#           payload: "/ask_carbon"
+#   utter_goodbye:
+#     - text: "Goodbye. Travel thoughtfully, and enjoy the journey."
+#   utter_thanks:
+#     - text: "You're welcome."
+#   utter_ask_destination:
+#     - text: "Where would you like to travel?"
+#   utter_ask_start_date:
+#     - text: "What is your departure date? Please use YYYY-MM-DD if possible."
+#   utter_ask_end_date:
+#     - text: "What is your return date? Please use YYYY-MM-DD if possible."
+#   utter_ask_budget:
+#     - text: "What total budget should I work with?"
+#   utter_ask_sustainability_preference:
+#     - text: "How strongly should I prioritise lower carbon choices?"
+#       buttons:
+#         - title: "Low"
+#           payload: '/inform_sustainability{"sustainability_preference":"low"}'
+#         - title: "Medium"
+#           payload: '/inform_sustainability{"sustainability_preference":"medium"}'
+#         - title: "High"
+#           payload: '/inform_sustainability{"sustainability_preference":"high"}'
+#   utter_trip_slots_received:
+#     - text: "Thanks. I have your destination, dates, budget, and sustainability preference."
+#   utter_ask_clarification:
+#     - text: "I may have missed that. Could you rephrase, or choose one of these?"
+#       buttons:
+#         - title: "Plan a trip"
+#           payload: "/book_trip"
+#         - title: "Recommendations"
+#           payload: "/ask_recommendation"
+#         - title: "Human help"
+#           payload: "/ask_handover"
+#   utter_escalating:
+#     - text: "I will prepare a concise handover summary for a human advisor."
+#   utter_out_of_scope:
+#     - text: "I can help with sustainable travel planning, carbon estimates, eco hotels, transport, and cultural experiences."
+#   utter_no_greenwashing:
+#     - text: "I avoid absolute green claims. I can compare lower-impact options using available carbon, cost, and context data."
+#   utter_ethics_notice:
+#     - text: "Privacy and transparency notice: I use your trip details only to plan this conversation. Carbon estimates are approximate and depend on available data. Sustainability labels compare options; they are not claims that travel is impact-free."
+
+# actions:
+#   - validate_trip_planning_form
+#   - action_calculate_carbon
+#   - action_get_recommendations
+#   - action_handover_to_human
+#   - action_default_fallback
+#   - action_reset_trip
+
+# session_config:
+#   session_expiration_time: 120
+#   carry_over_slots_to_new_session: true
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - book_trip
+  - inform_destination
+  - inform_budget
+  - inform_dates
+  - inform_sustainability
+  - ask_recommendation
+  - ask_carbon
+  - ask_transport
+  - ask_culture
+  - ask_handover
+  - thanks
+  - out_of_scope
+  - fallback
+
+entities:
+  - destination
+  - origin
+  - budget
+  - start_date
+  - end_date
+  - sustainability_preference
+  - transport_mode
+  - people
+
+slots:
+  destination:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: destination
+      - type: from_text
+        conditions:
+          - active_loop: trip_planning_form
+            requested_slot: destination
+
+  origin:
+    type: text
+    initial_value: London
+    mappings:
+      - type: from_entity
+        entity: origin
+      - type: from_text
+        conditions:
+          - active_loop: trip_planning_form
+            requested_slot: origin
+
+  budget:
+    type: float
+    min_value: 0.0
+    max_value: 100000.0
+    mappings:
+      - type: from_entity
+        entity: budget
+      - type: from_text
+        conditions:
+          - active_loop: trip_planning_form
+            requested_slot: budget
+
+  start_date:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: start_date
+      - type: from_text
+        conditions:
+          - active_loop: trip_planning_form
+            requested_slot: start_date
+
+  end_date:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: end_date
+      - type: from_text
+        conditions:
+          - active_loop: trip_planning_form
+            requested_slot: end_date
+
+  sustainability_preference:
+    type: categorical
+    values:
+      - low
+      - medium
+      - high
+    mappings:
+      - type: from_entity
+        entity: sustainability_preference
+      - type: from_text
+        conditions:
+          - active_loop: trip_planning_form
+            requested_slot: sustainability_preference
+
+  transport_mode:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: transport_mode
+
+  people:
+    type: float
+    initial_value: 1
+    min_value: 1
+    max_value: 20
+    mappings:
+      - type: from_entity
+        entity: people
+
+  carbon_results:
+    type: any
+    mappings:
+      - type: custom
+
+  travel_options:
+    type: any
+    mappings:
+      - type: custom
+
+  ranked_results:
+    type: any
+    mappings:
+      - type: custom
+
+  fallback_count:
+    type: float
+    initial_value: 0
+    mappings:
+      - type: custom
+
+  conversation_summary:
+    type: text
+    mappings:
+      - type: custom
+
+
+forms:
+  trip_planning_form:
+    required_slots:
+      - origin
+      - destination
+      - start_date
+      - end_date
+      - budget
+      - sustainability_preference
+
+
+responses:
+  utter_greet:
+    - text: "Hello. I can help plan a lower-impact trip with transparent carbon and budget trade-offs."
+      buttons:
+        - title: "Plan a trip"
+          payload: "/book_trip"
+        - title: "Carbon estimate"
+          payload: "/ask_carbon"
+
+  utter_goodbye:
+    - text: "Goodbye. Travel thoughtfully, and enjoy the journey."
+
+  utter_thanks:
+    - text: "You're welcome."
+
+  utter_ask_origin:
+    - text: "Where are you starting your trip from?"
+
+  utter_ask_destination:
+    - text: "Where would you like to travel?"
+
+  utter_ask_start_date:
+    - text: "What is your departure date? Please use YYYY-MM-DD if possible."
+
+  utter_ask_end_date:
+    - text: "What is your return date? Please use YYYY-MM-DD if possible."
+
+  utter_ask_budget:
+    - text: "What total budget should I work with?"
+
+  utter_ask_sustainability_preference:
+    - text: "How strongly should I prioritise lower carbon choices?"
+      buttons:
+        - title: "Low"
+          payload: '/inform_sustainability{"sustainability_preference":"low"}'
+        - title: "Medium"
+          payload: '/inform_sustainability{"sustainability_preference":"medium"}'
+        - title: "High"
+          payload: '/inform_sustainability{"sustainability_preference":"high"}'
+
+  utter_trip_slots_received:
+    - text: "Thanks. I have your origin, destination, dates, budget, and sustainability preference."
+
+  utter_ask_clarification:
+    - text: "I may have missed that. Could you rephrase, or choose one of these?"
+      buttons:
+        - title: "Plan a trip"
+          payload: "/book_trip"
+        - title: "Recommendations"
+          payload: "/ask_recommendation"
+        - title: "Human help"
+          payload: "/ask_handover"
+
+  utter_escalating:
+    - text: "I will prepare a concise handover summary for a human advisor."
+
+  utter_out_of_scope:
+    - text: "I can help with sustainable travel planning, carbon estimates, eco hotels, transport, and cultural experiences."
+
+  utter_no_greenwashing:
+    - text: "I avoid absolute green claims. I can compare lower-impact options using available carbon, cost, and context data."
+
+  utter_ethics_notice:
+    - text: "Privacy and transparency notice: I use your trip details only to plan this conversation. Carbon estimates are approximate and depend on available data. Sustainability labels compare options; they are not claims that travel is impact-free."
+
+
+actions:
+  - validate_trip_planning_form
+  - action_calculate_carbon
+  - action_get_recommendations
+  - action_handover_to_human
+  - action_default_fallback
+  - action_reset_trip
+
+
+session_config:
+  session_expiration_time: 120
+  carry_over_slots_to_new_session: true

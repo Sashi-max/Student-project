@@ -1,0 +1,188 @@
+{
+  "greet": {
+    "precision": 1.0,
+    "recall": 0.3333333333333333,
+    "f1-score": 0.5,
+    "support": 6,
+    "confused_with": {
+      "book_trip": 1,
+      "inform_sustainability": 1
+    }
+  },
+  "inform_destination": {
+    "precision": 0.7647058823529411,
+    "recall": 0.7647058823529411,
+    "f1-score": 0.7647058823529412,
+    "support": 17,
+    "confused_with": {
+      "ask_recommendation": 2,
+      "ask_handover": 1
+    }
+  },
+  "ask_handover": {
+    "precision": 0.4444444444444444,
+    "recall": 0.4,
+    "f1-score": 0.4210526315789474,
+    "support": 10,
+    "confused_with": {
+      "thanks": 2,
+      "book_trip": 1
+    }
+  },
+  "deny": {
+    "precision": 0.2,
+    "recall": 0.2,
+    "f1-score": 0.20000000000000004,
+    "support": 5,
+    "confused_with": {
+      "affirm": 2,
+      "inform_destination": 1,
+      "inform_budget": 1
+    }
+  },
+  "out_of_scope": {
+    "precision": 0.5,
+    "recall": 0.2,
+    "f1-score": 0.28571428571428575,
+    "support": 5,
+    "confused_with": {
+      "ask_handover": 2,
+      "ask_recommendation": 1,
+      "book_trip": 1
+    }
+  },
+  "affirm": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 5,
+    "confused_with": {
+      "deny": 3,
+      "thanks": 1,
+      "ask_handover": 1
+    }
+  },
+  "inform_dates": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 14,
+    "confused_with": {}
+  },
+  "ask_culture": {
+    "precision": 0.4,
+    "recall": 0.4,
+    "f1-score": 0.4000000000000001,
+    "support": 5,
+    "confused_with": {
+      "inform_sustainability": 1,
+      "ask_recommendation": 1
+    }
+  },
+  "thanks": {
+    "precision": 0.375,
+    "recall": 0.75,
+    "f1-score": 0.5,
+    "support": 4,
+    "confused_with": {
+      "affirm": 1
+    }
+  },
+  "inform_budget": {
+    "precision": 0.9285714285714286,
+    "recall": 1.0,
+    "f1-score": 0.962962962962963,
+    "support": 13,
+    "confused_with": {}
+  },
+  "book_trip": {
+    "precision": 0.375,
+    "recall": 0.5,
+    "f1-score": 0.42857142857142855,
+    "support": 12,
+    "confused_with": {
+      "inform_sustainability": 2,
+      "ask_recommendation": 2
+    }
+  },
+  "fallback": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 3,
+    "confused_with": {
+      "inform_sustainability": 1,
+      "inform_destination": 1,
+      "ask_transport": 1
+    }
+  },
+  "ask_transport": {
+    "precision": 0.3333333333333333,
+    "recall": 0.2,
+    "f1-score": 0.25,
+    "support": 5,
+    "confused_with": {
+      "ask_culture": 2,
+      "affirm": 1,
+      "inform_sustainability": 1
+    }
+  },
+  "goodbye": {
+    "precision": 0.5,
+    "recall": 0.2,
+    "f1-score": 0.28571428571428575,
+    "support": 5,
+    "confused_with": {
+      "thanks": 2,
+      "deny": 1
+    }
+  },
+  "ask_recommendation": {
+    "precision": 0.4117647058823529,
+    "recall": 0.6363636363636364,
+    "f1-score": 0.5,
+    "support": 11,
+    "confused_with": {
+      "book_trip": 3,
+      "out_of_scope": 1
+    }
+  },
+  "inform_sustainability": {
+    "precision": 0.6842105263157895,
+    "recall": 0.7647058823529411,
+    "f1-score": 0.7222222222222222,
+    "support": 17,
+    "confused_with": {
+      "ask_recommendation": 2,
+      "book_trip": 2
+    }
+  },
+  "ask_carbon": {
+    "precision": 0.8888888888888888,
+    "recall": 0.8,
+    "f1-score": 0.8421052631578948,
+    "support": 10,
+    "confused_with": {
+      "ask_recommendation": 2
+    }
+  },
+  "accuracy": 0.6054421768707483,
+  "macro avg": {
+    "precision": 0.5179952476346577,
+    "recall": 0.47935933731781477,
+    "f1-score": 0.4742969977808805,
+    "support": 147
+  },
+  "weighted avg": {
+    "precision": 0.6138259815204278,
+    "recall": 0.6054421768707483,
+    "f1-score": 0.5930467703650661,
+    "support": 147
+  },
+  "micro avg": {
+    "precision": 0.6054421768707483,
+    "recall": 0.6054421768707483,
+    "f1-score": 0.6054421768707483,
+    "support": 147
+  }
+}

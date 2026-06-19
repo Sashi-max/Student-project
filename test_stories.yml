@@ -1,0 +1,52 @@
+version: "3.1"
+
+stories:
+  - story: test complete planning
+    steps:
+      - user: |
+          hello
+        intent: greet
+      - action: utter_greet
+      - action: utter_ethics_notice
+      - user: |
+          plan a low carbon trip
+        intent: book_trip
+      - action: trip_planning_form
+      - active_loop: trip_planning_form
+      - user: |
+          Amsterdam
+        intent: inform_destination
+      - slot_was_set:
+          - destination: Amsterdam
+      - user: |
+          2026-07-10
+        intent: inform_dates
+      - slot_was_set:
+          - start_date: 2026-07-10
+      - user: |
+          2026-07-17
+        intent: inform_dates
+      - slot_was_set:
+          - end_date: 2026-07-17
+      - user: |
+          1200
+        intent: inform_budget
+      - slot_was_set:
+          - budget: 1200
+      - user: |
+          high
+        intent: inform_sustainability
+      - slot_was_set:
+          - sustainability_preference: high
+      - active_loop: null
+      - action: utter_trip_slots_received
+      - action: action_calculate_carbon
+      - action: action_get_recommendations
+
+  - story: test handover
+    steps:
+      - user: |
+          I want to speak to a human
+        intent: ask_handover
+      - action: utter_escalating
+      - action: action_handover_to_human

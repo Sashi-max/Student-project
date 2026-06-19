@@ -1,0 +1,225 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - hello
+      - hi
+      - hey there
+      - good morning
+      - good evening
+      - can you help me plan a trip?
+
+  - intent: goodbye
+    examples: |
+      - bye
+      - goodbye
+      - see you later
+      - that's all
+      - end chat
+
+  - intent: thanks
+    examples: |
+      - thanks
+      - thank you
+      - great thanks
+      - that helps
+
+  - intent: affirm
+    examples: |
+      - yes
+      - yep
+      - correct
+      - that is right
+      - please do
+
+  - intent: deny
+    examples: |
+      - no
+      - nope
+      - not really
+      - don't do that
+      - cancel
+
+  - intent: book_trip
+    examples: |
+      - I want to book a sustainable trip
+      - help me plan an eco holiday
+      - plan a low carbon trip
+      - I need a green travel itinerary
+      - organise my vacation
+      - I want to travel responsibly
+      - build me a sustainable itinerary
+      - plan a responsible tourism trip
+      - I need flights hotels and eco activities
+      - help me arrange a low impact city break
+      - create an eco travel plan for me
+      - I want a trip that balances cost and emissions
+
+  - intent: inform_destination
+    examples: |
+      - I want to visit [Amsterdam](destination)
+      - destination is [Barcelona](destination)
+      - take me to [Lisbon](destination)
+      - I am going to [Paris](destination)
+      - [Copenhagen](destination)
+      - from [London](origin) to [Rome](destination)
+      - leaving [Manchester](origin) for [Berlin](destination)
+      - flying from [New York](origin) to [Costa Rica](destination)
+      - I would like to go to [Tokyo](destination)
+      - plan for [Athens](destination)
+      - my destination is [Reykjavik](destination)
+      - I am starting in [Birmingham](origin) and going to [Vienna](destination)
+      - can you compare options for [Stockholm](destination)
+      - destination: [Edinburgh](destination)
+      - I want [Prague](destination)
+      - travel from [Bristol](origin) to [Dublin](destination)
+
+  - intent: inform_budget
+    examples: |
+      - my budget is [900](budget)
+      - around [1200](budget) pounds
+      - keep it under [1500](budget)
+      - I can spend [2000](budget)
+      - [750](budget)
+      - budget of [1000](budget) GBP
+      - I have about [650](budget)
+      - total spend should be [1800](budget)
+      - no more than [2200](budget)
+      - please keep the trip below [500](budget)
+      - my maximum budget is [3000](budget)
+      - use [1250](budget) as the budget
+
+  - intent: inform_dates
+    examples: |
+      - from [2026-07-10](start_date) to [2026-07-17](end_date)
+      - I leave on [2026-08-01](start_date) and return [2026-08-09](end_date)
+      - depart [2026-09-05](start_date)
+      - return [2026-09-12](end_date)
+      - between [2026-10-02](start_date) and [2026-10-11](end_date)
+      - my dates are [2026-12-20](start_date) to [2026-12-28](end_date)
+      - travelling [2026-07-15](start_date) until [2026-07-22](end_date)
+      - start date [2026-11-01](start_date), end date [2026-11-06](end_date)
+      - outbound [2026-08-14](start_date) inbound [2026-08-21](end_date)
+      - I go on [2026-09-18](start_date) and come back [2026-09-25](end_date)
+      - depart on [2026-10-10](start_date)
+      - return on [2026-10-17](end_date)
+
+  - intent: inform_sustainability
+    examples: |
+      - [high](sustainability_preference)
+      - [medium](sustainability_preference)
+      - [low](sustainability_preference)
+      - sustainability should be [high](sustainability_preference)
+      - make it very eco friendly
+      - balance cost and carbon
+      - cheaper is more important
+      - lowest carbon possible
+      - [high](sustainability_preference) priority for sustainability
+      - choose [medium](sustainability_preference) sustainability
+      - [low](sustainability_preference) sustainability is fine
+      - I want the greenest practical option
+      - put carbon reduction first
+      - I prefer a balanced recommendation
+      - make it cost led
+      - I care most about lower emissions
+
+  - intent: ask_recommendation
+    examples: |
+      - show me recommendations
+      - what do you recommend?
+      - recommend hotels and transport
+      - find eco hotels
+      - give me the best options
+      - compare my options
+      - show the recommended itinerary
+      - rank the hotels and travel choices
+      - recommend an eco hotel and transport
+      - what is the best low carbon plan?
+      - give me ranked sustainable options
+
+  - intent: ask_carbon
+    examples: |
+      - calculate the carbon footprint
+      - how much CO2 will this trip create?
+      - estimate emissions
+      - compare train and flight emissions
+      - carbon estimate please
+      - explain the CO2 values
+      - what are the emissions labels?
+      - calculate rail coach and flight carbon
+      - how green is this journey?
+      - show the carbon comparison
+
+  - intent: ask_transport
+    examples: |
+      - what green transport can I use?
+      - should I go by train?
+      - compare transport modes
+      - find low carbon transport
+      - is flying necessary?
+
+  - intent: ask_culture
+    examples: |
+      - suggest cultural experiences
+      - local responsible activities
+      - what can I do there?
+      - recommend community tourism
+      - authentic local experiences
+
+  - intent: ask_handover
+    examples: |
+      - I want to speak to a human
+      - hand me over
+      - contact an advisor
+      - human help please
+      - escalate this
+      - connect me to support
+      - send this to an admin
+      - I need a travel advisor
+      - please transfer me to a person
+      - human handover
+
+  - intent: out_of_scope
+    examples: |
+      - write my assignment
+      - what is the stock price?
+      - tell me a joke
+      - diagnose my illness
+      - order pizza
+
+  - intent: fallback
+    examples: |
+      - asdf qwer
+      - blue train sandwich
+      - maybe the thing with stuff
+
+  - synonym: high
+    examples: |
+      - very eco friendly
+      - lowest carbon possible
+      - maximum sustainability
+
+  - synonym: medium
+    examples: |
+      - balance cost and carbon
+      - balanced
+      - moderate
+
+  - synonym: low
+    examples: |
+      - cheaper is more important
+      - cost first
+      - budget priority
+
+  - regex: budget
+    examples: |
+      - \b\d{2,5}\b
+
+  - regex: start_date
+    examples: |
+      - \b20\d{2}-\d{2}-\d{2}\b
+
+  - regex: end_date
+    examples: |
+      - \b20\d{2}-\d{2}-\d{2}\b

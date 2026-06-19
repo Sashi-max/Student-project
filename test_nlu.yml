@@ -1,0 +1,31 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - hi there
+      - hello bot
+  - intent: book_trip
+    examples: |
+      - help me plan a sustainable holiday
+      - I want an eco trip
+  - intent: inform_destination
+    examples: |
+      - from [London](origin) to [Amsterdam](destination)
+      - [Copenhagen](destination)
+  - intent: inform_budget
+    examples: |
+      - keep it under [900](budget)
+      - my budget is [1500](budget)
+  - intent: inform_dates
+    examples: |
+      - [2026-07-10](start_date) to [2026-07-17](end_date)
+      - leave [2026-08-01](start_date) return [2026-08-08](end_date)
+  - intent: inform_sustainability
+    examples: |
+      - high sustainability
+      - balance cost and carbon
+  - intent: ask_handover
+    examples: |
+      - human advisor please
+      - escalate this chat

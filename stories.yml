@@ -1,0 +1,79 @@
+version: "3.1"
+
+stories:
+  - story: complete sustainable trip planning happy path
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - action: utter_ethics_notice
+      - intent: book_trip
+      - action: trip_planning_form
+      - active_loop: trip_planning_form
+      - active_loop: null
+      - action: utter_trip_slots_received
+      - action: action_calculate_carbon
+      - action: action_get_recommendations
+
+  - story: recommendation after remembered slots
+    steps:
+      - intent: ask_recommendation
+      - action: action_get_recommendations
+
+  - story: user provides destination first
+    steps:
+      - intent: inform_destination
+      - action: trip_planning_form
+      - active_loop: trip_planning_form
+      - active_loop: null
+      - action: utter_trip_slots_received
+      - action: action_calculate_carbon
+      - action: action_get_recommendations
+
+  - story: carbon only after trip details
+    steps:
+      - intent: ask_carbon
+      - action: action_calculate_carbon
+
+  - story: transport advice with ranking
+    steps:
+      - intent: ask_transport
+      - action: action_get_recommendations
+
+  - story: cultural experience recommendations
+    steps:
+      - intent: ask_culture
+      - action: action_get_recommendations
+
+  - story: handover requested directly
+    steps:
+      - intent: ask_handover
+      - action: utter_escalating
+      - action: action_handover_to_human
+
+  - story: out of scope then recovery
+    steps:
+      - intent: out_of_scope
+      - action: utter_out_of_scope
+      - intent: book_trip
+      - action: trip_planning_form
+      - active_loop: trip_planning_form
+      - active_loop: null
+      - action: utter_trip_slots_received
+      - action: action_calculate_carbon
+      - action: action_get_recommendations
+
+  - story: fallback recovery to trip planning
+    steps:
+      - intent: nlu_fallback
+      - action: action_default_fallback
+      - intent: book_trip
+      - action: trip_planning_form
+      - active_loop: trip_planning_form
+
+  - story: fallback recovery to handover
+    steps:
+      - intent: nlu_fallback
+      - action: action_default_fallback
+      - intent: ask_handover
+      - action: utter_escalating
+      - action: action_handover_to_human
